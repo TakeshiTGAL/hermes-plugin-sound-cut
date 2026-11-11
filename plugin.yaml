@@ -1,0 +1,30 @@
+name: sound-cut
+version: 0.1.0
+manifest_version: 2
+requires_hermes: ">=0.21.6"
+description: >
+  Trim silence, cut a span, convert, or loop a game sound effect on this
+  computer. Tools: sound_cut_inspect, sound_cut_midi, sound_cut_trim,
+  sound_cut_slice, sound_cut_convert, sound_cut_loop. Tempo is an estimate.
+author: TakeshiTGAL
+license: MIT
+platforms:
+  - macos
+provides_tools:
+  - sound_cut_inspect
+  - sound_cut_midi
+  - sound_cut_trim
+  - sound_cut_slice
+  - sound_cut_convert
+  - sound_cut_loop
+provides_hooks:
+  - pre_tool_call
+python_dependencies:
+  - "numpy>=2.4.3,<3"
+  - "mido>=1.3.3,<2"
+  - "miniaudio>=1.72,<2"
+tags:
+  - sound-effect
+  - ffmpeg
+  - midi
+  - loop
